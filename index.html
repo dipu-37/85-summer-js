@@ -40,7 +40,7 @@
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 lg:gap-12 gap-2 lg:w-3/4">
                
                 <!-- card - 1  -->
-                <div class="space-y-4 text-center ">
+                <div class="space-y-4 text-center" id="card_1" onclick="getTheResponseCard_1()">
                     <div class="card w-90 bg-base-100 shadow-xl">
                         <figure><img src="./images/prod1.png" alt="Shoes" /></figure>
                         <div class="card-body ">
@@ -51,14 +51,14 @@
                                 <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
                                 <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
                               </div>
-                              <p class="text-lg font-semibold">K. Accessories</p>
-                              <p class="text-lg font-normal">39.00 TK</p>
+                              <p class="text-lg font-semibold" id="productTitle">K. Accessories</p>
+                              <p class="text-lg font-normal" > <span id="price_01">39.00</span> TK</p>
                           
                         </div>
                       </div>
                 </div>
                  <!-- card - 2  -->
-                <div class="space-y-4 text-center ">
+                <div class="space-y-4 text-center " onclick="getTheResponse2()">
                     <div class="card w-90 bg-base-100 shadow-xl">
                         <figure><img src="./images/prod2.png" alt="Shoes" /></figure>
                         <div class="card-body">
@@ -69,14 +69,14 @@
                                 <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
                                 <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
                               </div>
-                              <p class="text-lg font-semibold">K. Accessories</p>
-                              <p class="text-lg font-normal">39.00 TK</p>
+                              <p class="text-lg font-semibold" id="productTitle_2">K. Accessories-2</p>
+                              <p class="text-lg font-normal" > <span id="price_02">35.00</span> TK</p>
                           
                         </div>
                       </div>
                 </div>
                  <!-- card - 3  -->
-                <div class="space-y-4 text-center">
+                <div class="space-y-4 text-center" onclick="getTheResponse3()">
                     <div class="card  w-90 bg-base-100 shadow-xl">
                         <figure><img src="./images/prod3.png" alt="Shoes" /></figure>
                         <div class="card-body ">
@@ -87,16 +87,16 @@
                                 <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
                                 <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
                               </div>
-                              <p class="text-lg font-semibold">K. Accessories</p>
-                              <p class="text-lg font-normal">39.00 TK</p>
+                              <p class="text-lg font-semibold" id="productTitle_3">K. Accessories-3</p>
+                              <p class="text-lg font-normal" > <span id="price_03">20.00</span> TK</p>
                           
                         </div>
                       </div>
                 </div>
             
                 <!-- card 2 heading  -->
-                <div class="lg:col-span-3 md:col-span-2">
-                        <h3 class="text-3xl font-semibold  col-span-3 my-6">Sportswear</h3>
+                <div class="lg:col-span-3 md:col-span-2 lg:mt-0 md:mt-0 mt-12">
+                        <h3 class="text-3xl font-semibold  col-span-3 ">Sportswear</h3>
 
                 </div>
                  <!-- card - 4  -->
@@ -156,33 +156,34 @@
                 
            <!-- coupne section  -->
             </div >
-            <div class=" lg:w-1/4 mt-12">
-                <div class="lg:ml-12">
+            <div class=" lg:w-1/4 ">
+                <div class="lg:ml-12 ">
                     <h2>Have coupon?</h2>
                     <div class="flex justify-center gap-2">
-                        <input type="text" placeholder="Type here" class="input input-bordered input-error w-full max-w-xs" />
-                        <button class="btn btn-secondary">Apply</button>
+                        <input type="text" placeholder="Type here" class="input input-bordered input-error w-full max-w-xs" id="coupne"/>
+                        <button class="btn bg-[#E527B2;] " disabled id="apply_button" >Apply</button>
                     </div>
                    <br>
     
                     <hr>
                     <div class="">
-                        <p>1. Home Cooker</p>
-                        <p>2. Sports cates</p>
-                        <p>3. Home Cooker</p>
+                        <p >1.<span id="showProduct_1">Home Cooker</span></p>
+                        <p>2.<span id="showProduct_2"> Sports cates</span></p>
+                        <p>3.<span id="showProduct_3"> Home Cooker</span></p>
+                       
                     </div>
                     <br>
                     <hr>
                     <div class="">
-                        <p>Total price: 257.00TK</p>
-                    <p>Discount : 51.40TK</p>
-                    <p>Total: 205.60 TK</p>
+                        <p>Total price: <span id="total_price_show">00</span> TK</p>
+                    <p>Discount : <span id="discount_price">00</span>TK</p>
+                    <p>Total: <span id="pay_price">00</span> TK</p>
     
                     </div>
                     <hr>
                     <br>
                     
-                    <button class="btn w-full bg-[#E527B2;]">Make Purchase</button>
+                    <button class="btn w-full bg-[#E527B2]" id="action_button" disabled onclick="window.location.href = 'index2.html';">Make Purchase</button>
                 </div>
                 
 
@@ -190,14 +191,9 @@
         </div>
         </section>
 
-
-        
-      
-
     </main>
-    <footer>
-
-    </footer>
-    
+  
+    <script src="./js/script.js"></script>
+    <script src="./js/function.js"></script>
 </body>
 </html>
